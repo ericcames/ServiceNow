@@ -1,0 +1,15 @@
+---
+- name: Retrieve change ticket by number
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+    - name: Retrieve change ticket by number
+      servicenow.itsm.incident_info:
+        number: CHG0030004
+      register: result
+
+    - name: Printing the change info
+      ansible.builtin.debug:
+        msg:  "{{ result }}"
