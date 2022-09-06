@@ -10,6 +10,6 @@
         number: INC0010001
       register: result
 
-    - name: Printing the public dns name
+    - name: Printing the incident info
       ansible.builtin.debug:
         msg:  "{{ result }}"
