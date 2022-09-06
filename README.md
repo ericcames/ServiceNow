@@ -18,3 +18,9 @@
         - SN_HOST  
         - SN_USERNAME  
         - SN_PASSWORD  
+    ***Injector configuration***  
+    ---  
+    env:
+        SN_HOST: '{{ SN_HOST }}'
+        SN_PASSWORD: '{{ SN_PASSWORD }}'
+        SN_USERNAME: '{{ SN_USERNAME }}'
