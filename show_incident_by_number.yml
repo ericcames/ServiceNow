@@ -9,3 +9,7 @@
       servicenow.itsm.incident_info:
         number: INC0010001
       register: result
+
+    - name: Printing the public dns name
+      ansible.builtin.debug:
+        msg:  "{{ result }}"
