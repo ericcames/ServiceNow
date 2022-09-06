@@ -6,7 +6,7 @@
   tasks:
 
     - name: Retrieve change ticket by number
-      servicenow.itsm.incident_info:
+      servicenow.itsm.change_request_info:
         number: CHG0030004
       register: result
 
