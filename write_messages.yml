@@ -1,0 +1,11 @@
+---
+- name: Writing to messages
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+  - name: Record the vpc start time 
+    community.general.syslogger:
+      msg: "My test message"
+    delegate_to: 172.16.1.4
