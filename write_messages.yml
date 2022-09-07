@@ -5,8 +5,8 @@
 
   tasks:
 
-  - name: Record the vpc start time 
-    community.general.syslogger:
-      msg: "My test message"
-      log_pid: yes
-    delegate_to: 172.16.1.4
+    - name: make a log entry
+      community.general.syslogger:
+        msg: "My test message"
+        log_pid: yes
+      delegate_to: 172.16.1.4
