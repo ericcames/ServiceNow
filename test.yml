@@ -7,7 +7,7 @@
 
     - name: Set up multiple authorized keys
       ansible.posix.authorized_key:
-        user: deploy
+        user: ec2-user
         state: present
         key: '{{ item }}'
       with_file:
