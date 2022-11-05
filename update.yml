@@ -1,0 +1,16 @@
+---
+- name: Retrieve a ServiceNow record
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+  - name: Grab a user record
+    servicenow.servicenow.snow_record:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      instance: "{{ instance }}"
+      state: present
+      number: 732a6edc874bd910700fcbb6dabb3590
+      table: sc_req_item
+      lookup_field: sys_id
