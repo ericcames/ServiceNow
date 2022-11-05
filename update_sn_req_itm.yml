@@ -8,7 +8,7 @@
 
       - name: Get an ServiceNow API Token and store it as new_token
         ansible.builtin.uri:
-          url: "https://{{ service_now_url }}/my/api/Account/UserLogin/"
+          url: "https://{{ service_now_url }}/oauth_token.do"
           method: POST
           user: "{{ username }}"
           password: "{{ password }}"
