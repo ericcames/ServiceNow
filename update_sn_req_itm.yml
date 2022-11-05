@@ -1,0 +1,35 @@
+---
+  - name: Login to the ServiceNow API and update a requested item
+    hosts: localhost
+    connection: local
+    gather_facts: no
+
+    tasks:
+
+      - name: Get an ServiceNow API Token and store it as new_token
+        ansible.builtin.uri:
+          url: "https://{{ service_now_url }}/my/api/Account/UserLogin/"
+          method: POST
+          user: "{{ username }}"
+          password: "{{ password }}"
+          validate_certs: no
+          force_basic_auth: yes
+          status_code: 200
+          return_content: yes       
+        register: new_token
+
+      - name: Print out the new token
+        debug: 
+          msg: "{{ new_token.json.token }}"
+
+      #- name: Kick off an inventory sync
+      #  ansible.builtin.uri:
+      #    url: "https://{{ controller_url }}/api/v2/inventory_sources/{{ inventory_id }}/update/"
+      #    headers:
+      #      Authorization: "Bearer {{ new_token.json.token }}"
+      #      Content-Type: "application/json"
+      #    validate_certs: no
+      #    follow_redirects: all
+      #    return_content: no
+      #    method: "POST"
+      #    status_code: 202
