@@ -3,3 +3,4 @@ collections:
   - name: servicenow.itsm
   - name: community.general
   - name: ansible.posix
+  - name: servicenow.servicenow
