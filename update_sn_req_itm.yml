@@ -12,7 +12,7 @@
       register: result
 
     - name: print the result
-      ansible.builtin.debug
+      ansible.builtin.debug:
         var: result
 
 
