@@ -12,8 +12,10 @@
       register: requestresult
       when: ticket_number != ''
     
-    - debug:
-      var: requestresult
+    - name: Print return information from the previous task
+      ansible.builtin.debug:
+        var: requestresult
+        verbosity: 2
 
     #- name: Update a catalog work notes and state in ServiceNow
     #  servicenow.itsm.api:
