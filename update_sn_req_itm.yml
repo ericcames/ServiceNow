@@ -23,3 +23,4 @@
         data:
           request_state: "{{ request_state | default(omit) }}"
           comments: "{{ work_notes }}"
+          state: 3
