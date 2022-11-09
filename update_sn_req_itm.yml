@@ -9,19 +9,18 @@
       servicenow.itsm.api_info:
         resource: sc_req_item
         sysparm_query: numberSTARTSWITH{{ ticket_number }}
-      register: requestresult
-    
-    - name: Print return information from the previous task
-      ansible.builtin.debug:
-        var: requestresult
-        verbosity: 2
+      register: result
+
+    - name: print the result
+      ansible.builtin.debug
+        var: result
+
 
     #- name: Update a catalog work notes and state in ServiceNow
     #  servicenow.itsm.api:
     #    action: patch
-    #    resource: sc_request
+    #    resource: sc_req_item
     #    sys_id: "{{ requestresult.record[0].sys_id }}"
     #    data:
     #      request_state: "{{ request_state | default(omit) }}"
     #      work_notes: "{{ work_notes }}"
-    #  when: ticket_number != '' 
