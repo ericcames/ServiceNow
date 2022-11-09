@@ -7,7 +7,7 @@
   
     - name: Retrieve catalog request sysid
       servicenow.itsm.api_info:
-        resource: sc_request
+        resource: sc_req_item
         sysparm_query: numberSTARTSWITH{{ ticket_number }}
       register: requestresult
       when: ticket_number != ''
