@@ -1,14 +1,14 @@
 # now.yml
 plugin: servicenow.itsm.now
 #inventory_hostname_source: host_name
-#columns:
+columns:
 #  - host_name
-#  - name
-#  - fqdn
-#  - ip_address
-#  - os
-#  - classification
-#  - sys_id
+  - name
+  - fqdn
+  - ip_address
+  - os
+  - classification
+  - sys_id
 #compose:
 #  ip_addr: ip_address
 #  ansible_host: host_name
