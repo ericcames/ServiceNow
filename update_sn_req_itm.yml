@@ -22,7 +22,7 @@
         sys_id: "{{ result.record[0].sys_id }}"
         data:
           request_state: "{{ request_state | default(omit) }}"
-          comments: "Provisioning details
-                     VPC Create Time:     {{ vpc_create_time }}
-                     Machine Create Time: {{ machine_create_time }}"
+          comments: "Provisioning details VPC Create Time: {{ vpc_create_time }} Machine Create Time: {{ machine_create_time }}
+                     AWS Sync Time: {{ aws_sync_time }} RedHat Subscription Time: {{ subscription_time }} Post Install Time: {{ post_install_time }}
+                     RedHat Insights Time: {{ insights_time }} Website Start Time: {{ lamp_time }}"
           state: 3
