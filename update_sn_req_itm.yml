@@ -22,5 +22,7 @@
         sys_id: "{{ result.record[0].sys_id }}"
         data:
           request_state: "{{ request_state | default(omit) }}"
-          comments: "{{ work_notes }}"
+          comments: "Provisioning details
+                     VPC Create Time:     {{ vpc_create_time }}
+                     Machine Create Time: {{ machine_create_time }}"
           state: 3
