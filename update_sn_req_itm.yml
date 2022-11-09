@@ -10,7 +10,6 @@
         resource: sc_req_item
         sysparm_query: numberSTARTSWITH{{ ticket_number }}
       register: requestresult
-      when: number != ''
     
     - name: Print return information from the previous task
       ansible.builtin.debug:
