@@ -26,3 +26,4 @@
                      AWS Sync Time: {{ aws_sync_time }} RedHat Subscription Time: {{ subscription_time }} Post Install Time: {{ post_install_time }}
                      RedHat Insights Time: {{ insights_time }} Website Start Time: {{ lamp_time }}"
           state: 3
+        #delete me
