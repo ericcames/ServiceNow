@@ -1,22 +1,26 @@
 ---
 - name: creating a cmdb record
   hosts: localhost
-  gather_facts: yes
+  gather_facts: no
   
   tasks:
 
     - name: Create a configuration item
       servicenow.itsm.configuration_item:
         name: socrates.internal.example.com
-        short_description: HPE ProLiant Server G7
+        short_description: Ansible Automation Platfrom demo
         serial_number: ECE-164-E10834-NO
         asset_tag: P1000613
         sys_class_name: cmdb_ci_server
         assigned_to: hercules
         environment: production
+        install_status: installed
         category: Hardware
         other:
           model_number: BL465C G7
+        ip_address: 1.2.3.4
+        operational_status: operational
+
       register: server
     
     - name: print the result
