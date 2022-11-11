@@ -20,7 +20,6 @@
           model_number: BL465C G7
         ip_address: 1.2.3.4
         operational_status: operational
-        company: Red Hat
 
       register: server
     
