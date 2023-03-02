@@ -13,7 +13,7 @@
         short_description: Ansible Automation Platfrom demo
         serial_number: "{{ my_instance_id }}"
         asset_tag: "{{ my_ami_id }}"
-        sys_class_name: cmdb_ci_win_server
+        sys_class_name: cmdb_ci_linux_server
         assigned_to: hercules
         environment: production
         install_status: installed
