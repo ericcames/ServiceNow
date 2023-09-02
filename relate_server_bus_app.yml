@@ -2,8 +2,8 @@
 - name: Relating newly built server to the business application it supports
   hosts: localhost
   gather_facts: no
-  
-  tasks: 
+
+  tasks:
 
     - name: So that we know why we built the thing
       register: my_result
