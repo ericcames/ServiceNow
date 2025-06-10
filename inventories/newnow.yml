@@ -1,0 +1,17 @@
+plugin: servicenow.itsm.now
+inventory_hostname_source: name
+columns:
+  - name
+  - fqdn
+  - ip_address
+  - os
+  - classification
+  - sys_id
+compose:
+ ip_addr: ip_address
+ ansible_host: name
+keyed_groups:
+ - key: os
+   separator: ""
+ - key: classification
+   separator: ""

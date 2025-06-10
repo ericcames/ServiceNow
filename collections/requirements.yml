@@ -1,6 +1,7 @@
 ---
 collections:
   - name: servicenow.itsm
+    version: 2.9.3
   - name: community.general
   - name: ansible.posix
   - name: servicenow.servicenow
